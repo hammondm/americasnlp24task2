@@ -1,0 +1,16 @@
+source ~/Desktop/mh/bin/activate
+
+python newmhtest.py bribri-train.tsv bribri-test.tsv bribri.tsv
+#python newmhtest.py bribri-train.tsv bribri-dev.tsv bribri.tsv
+#python ~/Desktop/americasnlp2024/ST2_EducationalMaterials/baseline/evaluate.py bribri.tsv
+python newmhtest.py guarani-train.tsv guarani-test.tsv guarani.tsv
+#python newmhtest.py guarani-train.tsv guarani-dev.tsv guarani.tsv
+#python ~/Desktop/americasnlp2024/ST2_EducationalMaterials/baseline/evaluate.py guarani.tsv
+python newmhtest.py maya-train.tsv maya-test.tsv maya.tsv
+#python newmhtest.py maya-train.tsv maya-dev.tsv maya.tsv
+#python ~/Desktop/americasnlp2024/ST2_EducationalMaterials/baseline/evaluate.py maya.tsv
+
+deactivate
+
+#rm *.tsv
+

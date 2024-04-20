@@ -1,0 +1,16 @@
+
+python dolang.py bribri
+python dolang.py guarani
+python dolang.py maya
+
+source ~/Desktop/mh/bin/activate
+python ~/Desktop/americasnlp2024/ST2_EducationalMaterials/baseline/evaluate.py bribri.tsv
+python ~/Desktop/americasnlp2024/ST2_EducationalMaterials/baseline/evaluate.py guarani.tsv
+python ~/Desktop/americasnlp2024/ST2_EducationalMaterials/baseline/evaluate.py maya.tsv
+deactivate
+
+rm -r __pycache__
+rm bribri.tsv
+rm guarani.tsv
+rm maya.tsv
+

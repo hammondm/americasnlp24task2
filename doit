@@ -1,0 +1,10 @@
+for i in {bribri,guarani,maya}
+do
+	echo $i
+	python anlp.py $i
+	source ~/Desktop/mh/bin/activate
+	python ~/Desktop/americasnlp2024/ST2_EducationalMaterials/baseline/evaluate.py $i.tsv 
+	deactivate
+	echo ""
+done
+
