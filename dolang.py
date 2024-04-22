@@ -90,16 +90,6 @@ for line in t[1:]:
 		res = edittree.applyrule(best[0],best[1],source)
 		#stop when a rule does something
 		if res != target: break
-
-	#print(f'{source}\n\t{change}\n\t{target}')
-	#print(f'\t{res}\n\t{best[0]}\n\t{best[1]}\n')
-	#if target != res:
-	#	print(f'MISS: {source}')
-	#	print(f'\t{best[0]}\t{best[1]}')
-	#	print(f'\t{change}')
-	#	print(f'\t{target}')
-	#	print(f'\t{res}')
-
 	h.write(f'{ID}\t{source}\t{change}\t{target}\t{res}\n')
 h.close()
 
