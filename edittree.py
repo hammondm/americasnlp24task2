@@ -1,9 +1,3 @@
-#edit trees
-#https://explosion.ai/blog/edit-tree-lemmatizer
-
-#add spaces to the variables
-#fuzzy matching: difflib?
-
 import re
 
 #get all substrings
@@ -51,7 +45,6 @@ def converttoregex(y):
 
 	#force this to match anything this length or shorter
 	elif type(y[0]) == int and type(y[1]) == int:
-		#res = ('(.*)','\\xxx')
 		dist = y[1] - y[0]
 		res = ('(.{1,' + str(dist) + '})','\\xxx')
 	elif y == ('',''):
@@ -74,19 +67,8 @@ def makenums(s):
 #make tree and rule
 def makerule(word1,word2):
 	x = maketree(word1,word2)
-
-	#print(f'{word1}\n{word2}\n\t{x}')
-
 	inp,outp = converttoregex(x)
-
-	#inp = re.sub('\)\(',') (',inp)
-
-	#print(f'\t{inp}\n\t{outp}')
-
 	outp = makenums(outp)
-
-	#print(f'\t{outp}')
-
 	return (inp,outp)
 
 def applyrule(iw,ow,w):
