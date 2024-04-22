@@ -1,5 +1,5 @@
 
-#tweaked from
+#adapted from
 #https://pytorch.org/tutorials/intermediate/seq2seq_translation_tutorial.html
 
 from __future__ import unicode_literals, \
@@ -232,7 +232,6 @@ class AttnDecoderRNN(nn.Module):
 		return output,hidden,attn_weights
 
 # Training
-
 def indexesFromSentence(lang,sentence):
 	return [lang.word2index[word] for word in sentence]
 
@@ -270,7 +269,6 @@ def get_dataloader(batch_size):
 	return input_lang,output_lang,train_dataloader
 
 #training model
-
 def train_epoch(dataloader,encoder,decoder,
 		encoder_optimizer,decoder_optimizer,criterion):
 	total_loss = 0
@@ -337,7 +335,6 @@ def train(train_dataloader,encoder,decoder,n_epochs,learning_rate=0.001,
 			plot_loss_total = 0
 
 #evaluation
-
 def evaluate(encoder,decoder,sentence,input_lang,output_lang):
 	with torch.no_grad():
 		input_tensor = tensorFromSentence(input_lang,sentence)
